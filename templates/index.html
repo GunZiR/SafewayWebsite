@@ -1,10 +1,96 @@
 {% extends "base/base.html" %}
+{% load static %}
 
 {% block title %}
   Safeway Tailgate
 {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">Hi from home</h1>
-    <button type="button" class="btn btn-primary">hello</button>
+    <div class="background-black py-lg-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col">
+                    <a class="navbar-brand" href="#">
+                        <img src="{% static 'images/logo.png' %}" alt="Logo">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a class="d-flex mx-3" href="#">Contact</a>
+                    <a class="d-flex mx-3" href="#">Global</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-yellow">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Tail Lifts</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Cooling Fan</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Logistics Products</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Dump hoist</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--<span class="v24_102">SAFE    CONVENIENT    SINCERE</span>-->
+    <footer class="container-fluid py-5 background-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col md-6">
+                    <div class="logo-part">
+                        <p>image</p>
+                        <p>167/1 M.4 T.Nongchak A.Banbung Chonburi 20170</p>
+                        <p>Monday - Saturday 08:00 AM - 05:00 PM</p>
+                        <p>+66 (0) 38-485-267</p>
+                        <p>+66 (0) 38-485-268</p>
+                    </div>
+                </div>
+                <div class="col md-6">
+                    <div class="row">
+                        <ul class="list-unstyled">
+                            <li><a href="#">After sales service</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="row my-5">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Follow us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top">
+                <span>©Copyright 2023 SAFEWAY TAILGATE CO.,LTD. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
