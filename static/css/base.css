@@ -1,0 +1,25 @@
+.background-black{
+    background-color:#101010
+}
+.background-grey{
+    background-color:#d9d9d9
+}
+
+.navbar-yellow {
+    background-color: #FBD300;
+}
+.logo-part {
+    border-right: 1px solid grey;
+    height: 100%;
+}
+.logo-footer {
+    margin-bottom: 40px;
+}
+.image-size-half {
+    width: 65%;
+    height: auto;
+}
+.image-size-80 {
+    width: 80%;
+    height: auto;
+}

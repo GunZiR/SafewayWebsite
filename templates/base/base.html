@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,30 +6,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 200) {
+                        document.getElementById('navbar_top').classList.add('fixed-top');
+                        // add padding top to show content behind navbar
+                        navbar_height = document.querySelector('.navbar').offsetHeight;
+                        document.body.style.paddingTop = navbar_height + 'px';
+                    } else {
+                         document.getElementById('navbar_top').classList.remove('fixed-top');
+                         // remove padding top from body
+                        document.body.style.paddingTop = '0';
+                    } 
+                });
+            }); 
+            // DOMContentLoaded  end
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <style>
-            .background-black{
-                background-color:#101010
-            }
-            .background-grey{
-                background-color:#d9d9d9
-            }
-            
-            .navbar-yellow {
-                background-color: #FBD300;
-            }
-            .logo-part {
-                border-right: 1px solid grey;
-                height: 100%;
-            }
-            .logo-footer {
-                margin-bottom: 40px;
-            }
-        </style>  
     </head>
     <body>
         {% block content %}
         {% endblock %}
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     </body>
 </html>

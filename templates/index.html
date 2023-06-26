@@ -6,22 +6,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="background-black py-lg-5">
+    <div class="background-black py-lg-2">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col">
                     <a class="navbar-brand" href="#">
-                        <img src="{% static 'images/logo.png' %}" alt="Logo">
+                        <img class="img-fluid image-size-80" src="{% static 'images/logo_crop.png' %}" alt="Logo">
                     </a>
                 </div>
                 <div class="col d-flex justify-content-end">
-                    <a class="d-flex mx-3" href="#">Contact</a>
-                    <a class="d-flex mx-3" href="#">Global</a>
+                    <a class="d-flex mx-3 text-decoration-none link-light" href="#">Contact</a>
+                    <a class="d-flex mx-3 text-decoration-none link-light" href="#">Global</a>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-sm navbar-yellow">
+    <nav class="navbar navbar-expand-sm navbar-yellow" id="navbar_top">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
@@ -60,36 +60,101 @@
             </li>
         </ul>
     </nav>
+    <div class="container" style="max-width: 720px">
+
+        <header class="py-4">
+            <h2>Demo page </h2> 
+        </header> <!-- section-header.// -->
+        
+        <section>
+        
+                
+                <h6>Demo for navbar or header make fixed after scroll <br> Based on Bootstrap 5 CSS framework.  </h6>
+                <p>For this demo page you should connect to the internet to receive files from CDN  like Bootstrap5 CSS, Bootstrap5 JS</p>
+        
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm od
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                <br><br>
+        </section>
+        
+        
+    </div>
     <!--<span class="v24_102">SAFE    CONVENIENT    SINCERE</span>-->
-    <footer class="container-fluid py-5 background-grey">
+    <footer class="container-fluid py-3 background-grey">
         <div class="container">
             <div class="row">
-                <div class="col md-6">
-                    <div class="logo-part">
-                        <p>image</p>
-                        <p>167/1 M.4 T.Nongchak A.Banbung Chonburi 20170</p>
-                        <p>Monday - Saturday 08:00 AM - 05:00 PM</p>
-                        <p>+66 (0) 38-485-267</p>
-                        <p>+66 (0) 38-485-268</p>
-                    </div>
+                <div class="col md-6 text-end">
+                        <img class="image-size-half my-3" src="{% static 'images/logo_crop.png' %}" alt="Logo">
+                        <p class="small mb-1">167/1 M.4 T.Nongchak A.Banbung Chonburi 20170</p>
+                        <p class="small mb-1">Monday - Saturday 08:00 AM - 05:00 PM</p>
+                        <p class="small mb-1">+66 (0) 38-485-267</p>
+                        <p class="small mb-1">+66 (0) 38-485-268</p>
                 </div>
-                <div class="col md-6">
-                    <div class="row">
-                        <ul class="list-unstyled">
-                            <li><a href="#">After sales service</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <div class="row my-5">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Follow us</a></li>
-                        </ul>
+                <div class="col md-6 m-5 p-1 mb-5 pb-0 d-flex flex-column align-items-center">
+                    <ul class="list-unstyled">
+                        <li><a class="text-decoration-none link-dark" href="#"><p class="small mb-1">After Sales Service</p></a></li>
+                        <li><a class="text-decoration-none link-dark" href="#"><p class="small mb-1">About Us</p></a></li>
+                        <li><a class="text-decoration-none link-dark" href="#"><p class="small mb-1">Contact Us</p></a></li>
+                    </ul>
+                    <h6 class="mt-2">Follow Us</h6>
+                    <div class="d-inline">
+                        <a class="text-decoration-none link-dark mx-1" href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="text-decoration-none link-dark mx-1" href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="text-decoration-none link-dark mx-1" href="#">
+                            <i class="fab fa-line"></i>
+                        </a>
+                        <a class="text-decoration-none link-dark mx-1" href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5 pt-4 border-top">
-                <span>©Copyright 2023 SAFEWAY TAILGATE CO.,LTD. All Rights Reserved.</span>
+            <div class="row pt-4 border-top border-dark">
+                <div class="col text-center">
+                    <span>©Copyright 2023 SAFEWAY TAILGATE CO.,LTD. All Rights Reserved.</span>
+                </div>
             </div>
         </div>
     </footer>
