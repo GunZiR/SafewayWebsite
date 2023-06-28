@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
-        <link rel="icon" href="{% static 'images/logo_crop.png' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'images/icon.png' %}" type="image/x-icon">
         <script src="{% static 'JavaScripts\base.js' %}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
@@ -95,13 +95,6 @@
                                         <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
                                         <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
                                     </ul>
-                                    <ul>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    </ul>
                                 </div>
                             </li>
                             <li class="nav-item dropdown mx-3">
@@ -117,18 +110,6 @@
                                         <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
                                     </ul>
                                     <ul>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    </ul>
                                 </div>
                             </li>
                             <li class="nav-item dropdown mx-3">
@@ -138,19 +119,6 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <ul>
                                         <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                                         <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
                                         <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
                                         <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
@@ -169,7 +137,7 @@
         <footer class="pb-2 background-grey">
             <div class="container">
               <div class="row">
-                <div class="col-lg mt-3 text-center">
+                <div class="col-lg pt-3 mt-4 text-center">
                   <a href="{% url 'index' %}">
                     <img class="img-fluid image-size-half my-3" src="{% static 'images/logo_crop.png' %}" alt="Logo">
                   </a>
@@ -208,7 +176,8 @@
               <div class="row mt-3 pt-2 border-top border-dark">
                 <div class="col-lg text-center">
                     <span class="small roboto-font">©</span>
-                    <span class="small">Copyright SAFEWAY TAILGATE CO.,LTD.</span>
+                    <span class="small">Copyright SAFEWAY TAILGATE CO.,LTD. </span>
+                    <span>{% now 'Y'%}</span>
                 </div>
               </div>
             </div>

@@ -13,21 +13,18 @@
     white-space:nowrap;
   }
   
-.animation:first-of-type {    /* For increasing performance 
-                         ID/Class should've been used. 
-                         For a small demo 
-                         it's okaish for now */
-    animation: showup 7s infinite;
+.animation:first-of-type { 
+    animation: showup 25s infinite;
   }
   
 .animation:last-of-type {
     width:0px;
-    animation: reveal 7s infinite;
+    animation: reveal 25s infinite;
   }
   
 .animation:last-of-type span {
     margin-left:-355px;
-    animation: slidein 7s infinite;
+    animation: slidein 25s infinite;
   }
   
   @keyframes showup {
