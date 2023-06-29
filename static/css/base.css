@@ -28,6 +28,10 @@
 .roboto-font{
     font-family: 'Roboto', sans-serif;
 }
+.yellow-text {
+    color: #fbd300;
+}
+
 /* Drop Down*/
 .dropdown-menu ul {
     list-style: none;

@@ -1,6 +1,3 @@
-.yellow-text {
-    color: #FBD300;
-}
 .animation-wrapper{
     text-align:center;
     font-weight:300;
@@ -14,37 +11,54 @@
   }
   
 .animation:first-of-type { 
-    animation: showup 25s infinite;
+    animation: showup 20s infinite;
   }
   
 .animation:last-of-type {
     width:0px;
-    animation: reveal 25s infinite;
+    animation: reveal 20s infinite;
   }
   
 .animation:last-of-type span {
     margin-left:-355px;
-    animation: slidein 25s infinite;
+    animation: slidein 20s infinite;
   }
   
-  @keyframes showup {
-      0% {opacity:0;}
-      20% {opacity:1;}
-      80% {opacity:1;}
-      100% {opacity:0;}
-  }
-  
-  @keyframes slidein {
-      0% { margin-left:-800px; }
-      20% { margin-left:-800px; }
-      35% { margin-left:0px; }
-      100% { margin-left:0px; }
-  }
-  
-  @keyframes reveal {
-      0% {opacity:0;width:0px;}
-      20% {opacity:1;width:0px;}
-      30% {width:320px;}
-      80% {opacity:1;}
-      100% {opacity:0;width:320px;}
-  }
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:320px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:320px;}
+}
+.fuller-button {
+  color: white;
+  background: none;
+  border-radius: 0;
+  letter-spacing: 0.35em;
+  font-size: 0.7em;
+  -webkit-transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+.fuller-button.yellow {
+  box-shadow: inset 0 0 1em #fbd30080, 0 0 1em #fbd30080;
+  border: #dddd00 solid 2px;
+}
+.fuller-button.yellow:hover {
+  background-color: #dddd00;
+  box-shadow: inset 0 0 0 #fbd30080, 0 0 1.5em #fbd300b3;
+}
