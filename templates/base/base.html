@@ -26,25 +26,25 @@
                 transform: translateY(100px);
                 transition: transform .5s;
             }
-        
         </style>
     </head>
-   
     <body class="background-black">
         <nav id="navbar_top" class="navbar navbar-expand-lg background-black flex-column py-0">
             <div class="container py-0">
-                <div class="col-6 ps-5">
+                <div class="col-6 ps-5 pt-1">
                     <a class="navbar-brand" href="{% url 'index' %}">
                         <img class="img-fluid image-size-80" src="{% static 'images/logo.png' %}" alt="Logo">
                     </a>
                 </div>
-                <div class="col-6 text-end pe-4">
+                <div class="col-6 text-end ms-auto pb-4">
                     <span>
                         <a class="mx-3 text-decoration-none link-light" href="{% url 'contact_us' %}">Contact</a>
                     </span>
-                    <span>
-                        <a class="text-decoration-none link-light" href="#" role="button" data-bs-toggle="dropdown"><i class="fa fa-light fa-globe"></i> Global</a>
-                        <ul class="dropdown-menu">
+                    <span class="dropdown">
+                        <a class="text-decoration-none link-light" href="#" role="button" aria-expanded="false" data-bs-toggle="dropdown" id="globalDropdown">
+                            <i class="fa fa-light fa-globe"></i> Global
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="globalDropdown">
                             <li><a class="dropdown-item" href="#">Thai</a></li>
                         </ul>
                     </span>
@@ -56,26 +56,26 @@
                 </button>
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto me-5">
-                        <li class="nav-item dropdown mx-3">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tail Gate
+                        <li class="nav-item dropdown dropdown-hover mx-3">
+                            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tail Lift & Tail Gate
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <div class="col md-3">
                                     <ul>
-                                        <li><a class="dropdown-item" href="#">Tail Gate</a></li>
                                         <li><a class="dropdown-item" href="#">Tail Lift</a></li>
+                                        <li><a class="dropdown-item" href="#">Tail Gate</a></li>
                                         <li><a class="dropdown-item" href="#">Van Lift</a></li>
                                         <li><a class="dropdown-item" href="#">Step Frame</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item dropdown mx-3">
+                        <li class="nav-item dropdown dropdown-hover mx-3">
                             <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Cooling Fan
+                                Cooling System
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <ul>
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
@@ -91,11 +91,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item dropdown mx-3">
+                        <li class="nav-item dropdown dropdown-hover mx-3">
                             <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Logistics Product
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <ul>
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
@@ -106,11 +106,11 @@
                                 <ul>
                             </div>
                         </li>
-                        <li class="nav-item dropdown mx-3">
+                        <li class="nav-item dropdown dropdown-hover mx-3">
                             <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dump Hoist
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <ul>
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
@@ -129,7 +129,7 @@
         <!-------------------------------------------------------- Footer---------------------------------------------------------------->
         <footer class="pb-2 background-grey">
             <div class="container">
-              <div class="row">
+              <div class="row ps-3 ms-4">
                 <div class="col-lg pt-3 mt-4 text-center">
                   <a href="{% url 'index' %}">
                     <img class="img-fluid image-size-half my-3" src="{% static 'images/logo.png' %}" alt="Logo">
@@ -145,11 +145,11 @@
                 </div>
                 <div class="col-lg mt-3">
                   <ul class="list-unstyled">
-                    <li><a class="text-decoration-none link-dark" href="{% url 'after_sales_service' %}"><p class="small mb-1">After Sales Service</p></a></li>
-                    <li><a class="text-decoration-none link-dark" href="{% url 'about_us' %}"><p class="small mb-1">About Us</p></a></li>
-                    <li><a class="text-decoration-none link-dark" href="{% url 'contact_us' %}"><p class="small mb-1">Contact Us</p></a></li>
+                    <li><a class="text-decoration-none link-dark" href="{% url 'after_sales_service' %}"><span class="small mb-1">After Sales Service</span></a></li>
+                    <li><a class="text-decoration-none link-dark" href="{% url 'about_us' %}"><span class="small mb-1">About Us</span></a></li>
+                    <li><a class="text-decoration-none link-dark" href="{% url 'contact_us' %}"><span class="small mb-1">Contact</span></a></li>
                   </ul>
-                  <h6 class="mt-2">Follow Us</h6>
+                  <h6 class="mt-2"><span>Follow</span></h6>
                   <div class="d-inline">
                     <a class="text-decoration-none link-dark mx-1" href="https://www.facebook.com/taillifts.safeway/?ref=bookmarks" target="_blank">
                       <i class="fab fa-facebook" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Facebook"></i>
