@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}
+  Safeway Tailgate - Contact Us
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contact_us.css' %}">
+<div class="container pt-4 pb-3">
+  <div class="row">
+    <div class="container mt-4">
+      <h1>
+        <span class="text-light">Contact</span>
+        <span class="yellow-text">US</span>
+      </h1>
+    </div>
+  </div>
+</div>
+  
+<div class="container mb-4">
+  <div class="row w-100">
+    <div class="col-lg-6 pt-3">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.6666485296684!2d101.18209613000802!3d13.308755271353386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d2d47bcf5b449%3A0xfba807716f27f6b1!2z4Lia4Lij4Li04Lip4Lix4LiXIOC5gOC4i-C4n-C5gOC4p-C4ouC5jCDguYDguJfguKXguYDguIHguJcg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v1688092625554!5m2!1sth!2sth"
+        class="w-100" height="400" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="col-md-6">
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+          <label class="yellow-text" for="{{ field.auto_id }}">{{ field.label}}</label>
+          {{ field }}
+        {% endfor %}
+        <button class="btn fuller-button yellow my-4" type="submit">SUBMIT</button>   
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

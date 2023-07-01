@@ -1,3 +1,22 @@
+/* Button Effect */
+.fuller-button {
+  color: #f8f9fa;
+  background: none;
+  border-radius: 0;
+  letter-spacing: 0.35em;
+  font-size: 0.7em;
+  -webkit-transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+.fuller-button.yellow {
+  box-shadow: inset 0 0 1em #fbd30080, 0 0 1em #fbd30080;
+  border: #fbd300 solid 2px;
+}
+.fuller-button.yellow:hover {
+  background-color: #fbd300;
+  box-shadow: inset 0 0 0 #fbd30080, 0 0 1.5em #fbd300b3;
+}
+/* Text Effect */
 .animation-wrapper{
     text-align:center;
     font-weight:300;
@@ -44,21 +63,4 @@
     30% {width:320px;}
     80% {opacity:1;}
     100% {opacity:0;width:320px;}
-}
-.fuller-button {
-  color: white;
-  background: none;
-  border-radius: 0;
-  letter-spacing: 0.35em;
-  font-size: 0.7em;
-  -webkit-transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-}
-.fuller-button.yellow {
-  box-shadow: inset 0 0 1em #fbd30080, 0 0 1em #fbd30080;
-  border: #dddd00 solid 2px;
-}
-.fuller-button.yellow:hover {
-  background-color: #dddd00;
-  box-shadow: inset 0 0 0 #fbd30080, 0 0 1.5em #fbd300b3;
 }

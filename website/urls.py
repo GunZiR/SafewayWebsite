@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from app import views
+from app.views import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('about-us', views.about_us, name='about_us'),
     path('contact-us', views.contact_us, name='contact_us'),
     path('after-sales-service', views.after_sales_service, name='after_sales_service'),
+    path('tail-lift', include('app.urls')),
 ]

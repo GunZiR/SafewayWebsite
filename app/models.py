@@ -8,4 +8,4 @@ class Truck(models.Model):
     max_speed = models.IntegerField()
 
     def __str__(self):
-        return f'{self.title} is {self.status}'
+        return f'{self.title} is {self.max_weight} at max weight'

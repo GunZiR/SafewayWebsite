@@ -167,7 +167,7 @@
 
 .main-timeline .description {
     margin-bottom: 0;
-    color: rgba(248,249,250)!important;
+    color: #f8f9fa!important;
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content {

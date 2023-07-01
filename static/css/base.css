@@ -31,7 +31,14 @@
 .yellow-text {
     color: #fbd300;
 }
-
+/* remove border from hamburger */
+.navbar-toggler:focus {
+    border: 0 !important;
+    box-shadow: none !important;    
+}
+.navbar-toggler {
+     border: 0 !important;
+}
 /* Drop Down*/
 .dropdown-menu ul {
     list-style: none;
