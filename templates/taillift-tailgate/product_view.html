@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}
+  Safeway Tailgate - Tail Lift & Tail Gate
+{% endblock %}
+
+{% block content %}
+  <ul class="list-unstyled">
+    {% for pchoice in choices %}
+      <li>
+        <p class="white-text">{{choice}}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

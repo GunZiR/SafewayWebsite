@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}
+  Safeway Tailgate - Tail Gate
+{% endblock %}
+
+{% block content %}
+<ul class="list-unstyled">
+  {% for size in sizes %}
+    <li>
+      <a class="text-decoration-none white-text" href="{% url 'products' type=type size=size %}">{{size}}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
