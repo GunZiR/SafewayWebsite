@@ -5,10 +5,13 @@
     border-radius: 30px;
     letter-spacing: 0.35em;
     font-size: 15px;
-  }
-  .fuller-button.yellow {
-    border: #fbd300 solid 2px;
-  }
-  .fuller-button.yellow:hover {
-    background-color: #fbd300;
-  }
+}
+.fuller-button.yellow {
+  border: #fbd300 solid 2px;
+}
+.fuller-button.yellow:hover {
+  background-color: #fbd300;
+}
+.bigsize{
+  font-size: 75px;
+}

@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}
+  Safeway Tailgate - About Us
+{% endblock %}
+
+{% block content %}
+<ul>
+  {% for car in cars %}
+    <li class="white-text">{{car}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -5,15 +5,15 @@ from django.http import HttpResponse, HttpResponseRedirect
 from ..forms import SubmitForm
 
 # Create your views here.
-def index(request):
-    return render(request, 'app\index.html')
+def index(response):
+    return render(response, 'app\index.html')
 
-def contact_us(request):
-    if request.method == "GET":
+def contact_us(response):
+    if response.method == "GET":
         form = SubmitForm()
         print('create form')
     else:
-        form = SubmitForm(request.POST)
+        form = SubmitForm(response.POST)
         print('submit form')
         if form.is_valid():
             print('form valid')
@@ -27,10 +27,10 @@ def contact_us(request):
                 return HttpResponse("Invalid header found.")
             return HttpResponse(f"{name}: {email} send with subject '{subject}' and message '{message}'")
         print('invalid form')
-    return render(request, 'app\contact_us.html', {"form": form})
+    return render(response, 'app\contact_us.html', {"form": form})
 
-def about_us(request):
-    return render(request, 'app\about_us.html')
+def about_us(response):
+    return render(response, 'app\\about_us.html')
 
-def after_sales_service(request):
-    return render(request, 'app\after_sales_service.html')
+def after_sales_service(response):
+    return render(response, 'app\\after_sales_service.html')
