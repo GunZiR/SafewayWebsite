@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-  Safeway Tailgate - Tail Gate
+  Safeway Tailgate - Tail Lift & Tail Gate
 {% endblock %}
 
 {% block content %}
@@ -11,19 +11,18 @@
   <div class="row">
     <div class="container mt-5 text-center">
       <h1>
-        <span class="yellow-text">{{type}}</span>
+        <span class="text-light">Tail Gate</span>
+        <span class="yellow-text"> & Tail Lift</span>
       </h1>
     </div>
   </div>
 </div>
 <div class="container">
-  {% for size in sizes %}
+  {% for product in products %}
   <article class="postcard dark">
     <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
     <div class="postcard__text px-4 pt-2">
-      <a class="stretched-link text-decoration-none"  href="{% url 'box' type=type size=size %}">
-        <h1 class="postcard__title yellow-text">{{size}}</h1>
-      </a>
+      <h1 class="postcard__title yellow-text">{{product}}</h1>
       <div class="postcard__subtitle">
         <i class="fas fa-calendar-alt mr-2 small"></i>
         <span class="small"> Mon, July 3 2023</span>

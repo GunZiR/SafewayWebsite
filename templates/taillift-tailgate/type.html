@@ -6,129 +6,37 @@
 {% endblock %}
 
 {% block content %}
-<ul class="list-unstyled">
-  {% for type in types %}
-    <li>
-      <a class="text-decoration-none white-text" href="{% url 'size' type %}">{{type}}</a>
-    </li>
-  {% endfor %}
-</ul>
 <link rel="stylesheet" href="{% static 'css/Taillift.css' %}">
 <div class="container pb-5">
   <div class="row">
     <div class="container mt-5 text-center">
       <h1>
-        <span class="text-light">TAIL</span>
-        <span class="yellow-text">GATE</span>
+        <span class="text-light">Tail Gate</span>
+        <span class="yellow-text"> & Tail Lift</span>
       </h1>
     </div>
   </div>
 </div>
+<div class="container">
+  {% for type in types %}
+  <article class="postcard dark">
+    <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+    <div class="postcard__text px-4 pt-2">
+      <a class="stretched-link text-decoration-none"  href="{% url 'size' type=type %}">
+        <h1 class="postcard__title yellow-text">{{type}}</h1>
+      </a>
+      <div class="postcard__subtitle">
+        <i class="fas fa-calendar-alt mr-2 small"></i>
+        <span class="small"> Mon, July 3 2023</span>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+      <ul class="postcard__tagbox">
+        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
+      </ul>
+    </div>
+  </article>
+{% endfor %}
+</div>
 <!--------------------------------------------------------------------------------------------------------------------->
-<section class="dark">
- <div class="container">
-  <article class="postcard dark blue">
-   <a class="postcard__img_link" href="#">
-    <img class="postcard__img" src="{% static 'images/Untitled-1.png' %}" alt="Image Title" />
-   </a>
-   <div class="postcard__text">
-    <h1 class="postcard__title blue"><a href="#">Trailer</a></h1>
-    <div class="postcard__subtitle small">
-      <i class="fas fa-calendar-alt mr-2"></i> Mon, July 3 2023
-    </div>
-    <div class="postcard__bar"></div>
-    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-    <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-    </ul>
-   </div>
-  </article>
-    <!--------------------------------------------------------------------------------------------------------------------->
-  <article class="postcard dark red">
-   <a class="postcard__img_link" href="#">
-    <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" /> 
-   </a>
-   <div class="postcard__text">
-    <h1 class="postcard__title red"><a href="#">10 Wheels</a></h1>
-    <div class="postcard__subtitle small">
-      <i class="fas fa-calendar-alt mr-2"></i> Mon, July 3 2023
-    </div>
-    <div class="postcard__bar"></div>
-    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-    <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-     </ul>
-   </div>
-  </article>
-    <!--------------------------------------------------------------------------------------------------------------------->
-  <article class="postcard dark green">
-   <a class="postcard__img_link" href="#">
-    <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
-   </a>
-   <div class="postcard__text">
-    <h1 class="postcard__title green"><a href="#">Small 6 wheels</a></h1>
-    <div class="postcard__subtitle small">
-      <i class="fas fa-calendar-alt mr-2"></i> Mon, July 3 2023
-    </div>
-    <div class="postcard__bar"></div>
-    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-    <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-    </ul>
-   </div>
-  </article>
-    <!--------------------------------------------------------------------------------------------------------------------->
-  <article class="postcard dark yellow">
-   <a class="postcard__img_link" href="#">
-    <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
-   </a>
-   <div class="postcard__text">
-    <h1 class="postcard__title yellow"><a href="#">Big 6 wheels</a></h1>
-    <div class="postcard__subtitle small">
-      <i class="fas fa-calendar-alt mr-2"></i> Mon, July 3 2023
-    </div>
-    <div class="postcard__bar"></div>
-    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-    <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-    </ul>
-   </div>
-  </article>
-    <!--------------------------------------------------------------------------------------------------------------------->
-    <article class="postcard dark yellow">
-   <a class="postcard__img_link" href="#">
-    <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
-   </a>
-   <div class="postcard__text">
-    <h1 class="postcard__title yellow"><a href="#">Big 4 wheels</a></h1>
-    <div class="postcard__subtitle small">
-      <i class="fas fa-calendar-alt mr-2"></i> Mon, July 3 2023
-    </div>
-    <div class="postcard__bar"></div>
-    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-    <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-    </ul>
-   </div>
-  </article>
-    <!--------------------------------------------------------------------------------------------------------------------->
-    <article class="postcard dark yellow">
-   <a class="postcard__img_link" href="#">
-    <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
-   </a>
-   <div class="postcard__text">
-    <h1 class="postcard__title yellow"><a href="#">Pickup</a></h1>
-    <div class="postcard__subtitle small">
-      <i class="fas fa-calendar-alt mr-2"></i> Mon, July 3 2023
-    </div>
-    <div class="postcard__bar"></div>
-    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-    <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-    </ul>
-   </div>
-  </article>
- </div>
-</section>
-
 {% endblock %}

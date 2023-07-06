@@ -1,39 +1,39 @@
 from django.shortcuts import render
 
-def type(response):
+def type(request):
     content = {'types': ['Tail Lift', 'Van Lift', 'Tail Gate', 'Step Frame']}
-    return render(response, 'taillift-tailgate\\type.html', content)
+    return render(request, 'taillift-tailgate\\type.html', content)
 
-def size(response, type):
+def size(request, type):
     content = {'type': type, 'sizes': ['trailer', '10 wheels', 'small 6 wheels', 'big 6 wheels', 'big 4 wheels', 'pickup']}
-    return render(response, 'taillift-tailgate\\size.html', content)
+    return render(request, 'taillift-tailgate\\size.html', content)
 
-def products(response, type, size):
+def box(request, type, size):
     if size=='trailer':
-        content = {'type': type, 'size': size, 'products': ['trailer 1', 'trailer 2', 'trailer 3']}
+        content = {'type': type, 'size': size, 'boxes': ['trailer 1', 'trailer 2', 'trailer 3']}
     elif size=='10 wheels':
-        content = {'type': type, 'size': size, 'products': ['10 wheels 1', '10 wheels 2', '10 wheels 3']}
+        content = {'type': type, 'size': size, 'boxes': ['10 wheels 1', '10 wheels 2', '10 wheels 3']}
     elif size=='small 6 wheels':
-        content = {'type': type, 'size': size, 'products': ['small 6 wheels 1', 'small 6 wheels 2', 'small 6 wheels 3']}
+        content = {'type': type, 'size': size, 'boxes': ['small 6 wheels 1', 'small 6 wheels 2', 'small 6 wheels 3']}
     elif size=='big 6 wheels':
-        content = {'type': type, 'size': size, 'products': ['big 6 wheels 1', 'big 6 wheels 2', 'big 6 wheels 3']}
+        content = {'type': type, 'size': size, 'boxes': ['big 6 wheels 1', 'big 6 wheels 2', 'big 6 wheels 3']}
     elif size=='big 4 wheels':
-        content = {'type': type, 'size': size, 'products': ['big 4 wheels 1', 'big 4 wheels 2', 'big 4 wheels 3']}
+        content = {'type': type, 'size': size, 'boxes': ['big 4 wheels 1', 'big 4 wheels 2', 'big 4 wheels 3']}
     elif size=='pickup':
-        content = {'type': type, 'size': size, 'products': ['pickup', 'box', 'carryboy']}
+        content = {'type': type, 'size': size, 'boxes': ['pickup', 'box', 'carryboy']}
     else:
-        return render(response, 'app\\404.html')
+        return render(request, 'app\\404.html')
 
-    return render(response, 'taillift-tailgate\\products.html', content)
+    return render(request, 'taillift-tailgate\\box.html', content)
 
-def product_view(response, type, size, product):
-    if product=='pickup':
-        content = {'type': type, 'size': size, 'product': product, 'choices': ['SWA600S', 'Accessory']}
-    elif product=='box':
-        content = {'type': type, 'size': size, 'product': product, 'choices': ['SWA600S', 'Accessory']}
-    elif product=='carryboy':
-        content = {'type': type, 'size': size, 'product': product, 'choices': ['SWA600S', 'SWA600S', 'Accessory']}
+def product(request, type, size, box):
+    if box=='pickup':
+        content = {'type': type, 'size': size, 'box': box, 'products': ['SWA600S', 'Accessory']}
+    elif box=='box':
+        content = {'type': type, 'size': size, 'box': box, 'products': ['SWA600S', 'Accessory']}
+    elif box=='carryboy':
+        content = {'type': type, 'size': size, 'box': box, 'products': ['SWA600S', 'SWA600S', 'Accessory']}
     else:
-        return render(response, 'app\\404.html')
+        return render(request, 'app\\404.html')
     
-    return render(response, 'taillift-tailgate\\product_view.html', content)
+    return render(request, 'taillift-tailgate\\product.html', content)

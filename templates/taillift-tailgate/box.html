@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-  Safeway Tailgate - Tail Gate
+  Safeway Tailgate - Tail Lift & Tail Gate
 {% endblock %}
 
 {% block content %}
@@ -11,18 +11,18 @@
   <div class="row">
     <div class="container mt-5 text-center">
       <h1>
-        <span class="yellow-text">{{type}}</span>
+        <span class="yellow-text">{{size}}</span>
       </h1>
     </div>
   </div>
 </div>
 <div class="container">
-  {% for size in sizes %}
+  {% for box in boxes %}
   <article class="postcard dark">
     <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
     <div class="postcard__text px-4 pt-2">
-      <a class="stretched-link text-decoration-none"  href="{% url 'box' type=type size=size %}">
-        <h1 class="postcard__title yellow-text">{{size}}</h1>
+      <a class="stretched-link text-decoration-none"  href="{% url 'product' type=type size=size box=box %}">
+        <h1 class="postcard__title yellow-text">{{box}}</h1>
       </a>
       <div class="postcard__subtitle">
         <i class="fas fa-calendar-alt mr-2 small"></i>
