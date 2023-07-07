@@ -32,7 +32,7 @@ class TailGateTailLiftBox(models.Model):
 # ===================================================: Tail Gate & Tail Lift product :================================================
 class TailGateTailLiftProduct(models.Model):
     name = models.CharField(max_length=100)
-    Box = models.ForeignKey(TailGateTailLiftBox, on_delete=models.CASCADE)
+    box = models.ForeignKey(TailGateTailLiftBox, on_delete=models.CASCADE)
     description = models.TextField()
     image_src = models.ImageField(upload_to='images/', null=True, blank=True)
 

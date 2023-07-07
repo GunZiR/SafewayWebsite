@@ -23,17 +23,15 @@
     <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
     <div class="postcard__text px-4 pt-2">
       <a class="stretched-link text-decoration-none"  href="{% url 'size' type=type %}">
-        <h1 class="postcard__title yellow-text">{{type}}</h1>
+        <h1 class="postcard__title yellow-text">{{type.name}}</h1>
       </a>
       <div class="postcard__subtitle">
-        <i class="fas fa-calendar-alt mr-2 small"></i>
+        <i class="fas fa-calendar-alt fa-xs mr-2"></i>
         <span class="small"> Mon, July 3 2023</span>
       </div>
       <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-      <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-      </ul>
+      <div class="postcard__preview-txt">{{type.description}}</div>
+      <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
     </div>
   </article>
 {% endfor %}

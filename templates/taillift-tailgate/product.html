@@ -11,8 +11,13 @@
   <div class="row">
     <div class="container mt-5 text-center">
       <h1>
-        <span class="text-light">Tail Gate</span>
-        <span class="yellow-text"> & Tail Lift</span>
+        {% for word in header %}
+          {% if forloop.counter0|divisibleby:2 %}
+            <span class="white-text">{{word}}</span>
+          {% else %}
+            <span class="yellow-text">{{word}}</span>
+          {% endif %}
+        {% endfor %}
       </h1>
     </div>
   </div>
@@ -24,11 +29,11 @@
     <div class="postcard__text px-4 pt-2">
       <h1 class="postcard__title yellow-text">{{product}}</h1>
       <div class="postcard__subtitle">
-        <i class="fas fa-calendar-alt mr-2 small"></i>
+        <i class="fas fa-calendar-alt fa-xs mr-2"></i>
         <span class="small"> Mon, July 3 2023</span>
       </div>
       <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+      <div class="postcard__preview-txt">{{product.description}}</div>
       <ul class="postcard__tagbox">
         <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
       </ul>
