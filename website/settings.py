@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'mptt',
+    'feincms',
+    'feincms.module.page',
+    'feincms.module.medialibrary',
     'app',
 ]
 
@@ -154,3 +157,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = '63010391@kmitl.ac.th'
 EMAIL_HOST_PASSWORD = 'Icekrung0986709091'
+
+FEINCMS_USE_PAGE_ADMIN = False

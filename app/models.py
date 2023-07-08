@@ -7,9 +7,13 @@ class TailGateTailLift(MPTTModel):
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     description = models.TextField()
     image_src = models.ImageField(upload_to='images/', null=True, blank=True)
+    
+    class Meta:
+        ordering = ['tree_id']
 
     def __str__(self):
         return self.name
+    
     
 
 # ======================================================: Cooling System :====================================================
@@ -19,16 +23,22 @@ class CoolingSystem(MPTTModel):
     description = models.TextField()
     image_src = models.ImageField(upload_to='images/', null=True, blank=True)
 
+    class Meta:
+        ordering = ['tree_id']
+
     def __str__(self):
         return self.name
     
 
 # ===================================================: Logistic Products :================================================
-class LogisticProducts(MPTTModel):
+class LogisticProduct(MPTTModel):
     name = models.CharField(max_length=255)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     description = models.TextField()
     image_src = models.ImageField(upload_to='images/', null=True, blank=True)
+
+    class Meta:
+        ordering = ['tree_id']
 
     def __str__(self):
         return self.name
@@ -40,6 +50,9 @@ class DumpHoist(MPTTModel):
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     description = models.TextField()
     image_src = models.ImageField(upload_to='images/', null=True, blank=True)
+
+    class Meta:
+        ordering = ['tree_id']
 
     def __str__(self):
         return self.name
