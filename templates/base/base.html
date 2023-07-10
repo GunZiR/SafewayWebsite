@@ -29,7 +29,7 @@
         </style>
     </head>
     <body class="background-black">
-        <nav id="navbar_top" class="navbar navbar-expand-lg background-black flex-column py-0">
+        <nav id="navbar_top" class="navbar navbar-expand-lg flex-column py-0" style="background-image:url('{% static 'images/77.jpg' %}')">
             <div class="container py-0">
                 <div class="col-6 ps-5 pt-1">
                     <a class="navbar-brand" href="{% url 'index' %}">
@@ -57,22 +57,22 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto me-5">
                         <li class="nav-item dropdown dropdown-hover mx-3">
-                            <a class="nav-link " href="{% url 'taillift&tailgate' %}" id="navbarDropdown" role="button" aria-expanded="false">
-                                Tail Lift & Tail Gate
+                            <a class="nav-link " href="{% url 'tl&tg_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
+                               Tail Gate & Tail Lift
                             </a>
                             <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <div class="col md-3">
                                     <ul>
-                                        <li><a class="dropdown-item" href="{% url 'size' type='Tail Gate' %}">Tail Gate</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'size' type='Van Lift' %}">Van Lift</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'size' type='Tail Lift' %}">Tail Lift</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'size' type='Step Frame' %}">Step Frame</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Tail Gate' %}">Tail Gate</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Van Lift' %}">Van Lift</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Tail Lift' %}">Tail Lift</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Step Frame' %}">Step Frame</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown dropdown-hover mx-3">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{% url 'cooling_system_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
                                 Cooling System
                             </a>
                             <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
@@ -85,8 +85,8 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown dropdown-hover mx-3">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" aria-expanded="false">
-                                Logistics Product
+                            <a class="nav-link" href="{% url 'logistic_product_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
+                                Logistic Product
                             </a>
                             <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <ul>
@@ -100,7 +100,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown dropdown-hover mx-3">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{% url 'dump_hoist_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
                                 Dump Hoist
                             </a>
                             <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">

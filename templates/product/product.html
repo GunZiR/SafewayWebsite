@@ -3,7 +3,7 @@
 {% load mptt_tags %}
 
 {% block title %}
-  Safeway Tailgate - Tail Lift & Tail Gate
+  Safeway Tailgate - Tail Gate
 {% endblock %}
 
 {% block content %}
@@ -11,6 +11,7 @@
 <div class="container pb-5">
   <div class="row">
     <div class="container mt-5 text-center">
+        
       <h1>
         {% for word in header %}
           {% if forloop.counter0|divisibleby:2 %}
@@ -24,21 +25,25 @@
   </div>
 </div>
 <div class="container">
-  {% recursetree boxes %}
+  {% recursetree products %}
   <article class="postcard dark">
     <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
     <div class="postcard__text px-4 pt-2">
-      <a class="stretched-link text-decoration-none"  href="{% url 'product' type=type size=size box=node.name %}">
-        <h1 class="postcard__title yellow-text">{{node.name}}</h1>
-      </a>
-      <div class="postcard__subtitle">
-        <i class="fas fa-calendar-alt fa-xs mr-2"></i>
-        <span class="small"> Mon, July 3 2023</span>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{node.description}}</div>
-      <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-    </div>
+        {% if not node.is_leaf_node %}
+            <a class="stretched-link text-decoration-none"  href="{{node.name}}">
+                <h1 class="postcard__title yellow-text mt-3">{{node.name}}</h1>
+            </a>
+        {% else %}
+            <h1 class="postcard__title yellow-text mt-3">{{node.name}}</h1>
+        {% endif %}
+        <div class="postcard__subtitle">
+            <i class="fas fa-calendar-alt fa-xs mr-2"></i>
+            <span class="small"> Mon, July 3 2023</span>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{node.description}}</div>
+        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
+        </div>
   </article>
   {% endrecursetree %}
 </div>
