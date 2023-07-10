@@ -1,12 +1,12 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% load mptt_tags %}
 
 {% block title %}
   Safeway Tailgate - Tail Lift & Tail Gate
 {% endblock %}
 
 {% block content %}
-<!--
 <link rel="stylesheet" href="{% static 'css/Taillift.css' %}">
 <div class="container pb-5">
   <div class="row">
@@ -22,26 +22,24 @@
       </h1>
     </div>
   </div>
-</div>-->
+</div>
 <div class="container">
-  {% for box in boxes %}
+  {% recursetree boxes %}
   <article class="postcard dark">
     <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
     <div class="postcard__text px-4 pt-2">
-      <a class="stretched-link text-decoration-none"  href="{% url 'product' type=type size=size box=box %}">
-        <h1 class="postcard__title yellow-text">{{box.name}}</h1>
+      <a class="stretched-link text-decoration-none"  href="{% url 'product' type=type size=size box=node.name %}">
+        <h1 class="postcard__title yellow-text">{{node.name}}</h1>
       </a>
       <div class="postcard__subtitle">
-        <i class="fas fa-calendar-alt mr- fa-xs"></i>
+        <i class="fas fa-calendar-alt fa-xs mr-2"></i>
         <span class="small"> Mon, July 3 2023</span>
       </div>
       <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{box.description}}</div>
-      <ul class="postcard__tagbox">
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
-      </ul>
+      <div class="postcard__preview-txt">{{node.description}}</div>
+      <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
     </div>
   </article>
-{% endfor %}
+  {% endrecursetree %}
 </div>
 {% endblock %}
