@@ -1,0 +1,44 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load mptt_tags %}
+
+{% block title %}
+  Safeway Tailgate - Tail Gate
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+<div class="container pb-5">
+  <div class="row">
+    <div class="container mt-5 text-center">
+        <h1>
+        {% for word in header %}
+            {% if not forloop.last %}
+              <span class="white-text">{{word}}</span>
+            {% else %}
+              <span class="yellow-text">{{word}}</span>
+            {% endif %}
+        {% endfor %}
+        </h1>
+        <h3 class="white-text">Accessory</h3>
+    </div>
+  </div>
+</div>
+<div class="container">
+    {% for accessory in accessories %}
+    <article class="postcard dark">
+        <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+        <div class="postcard__text px-4 pt-2">
+            <h1 class="postcard__title yellow-text mt-3">{{accessory.name}}</h1>
+            <div class="postcard__subtitle">
+                <i class="fas fa-calendar-alt fa-xs mr-2"></i>
+                <span class="small"> Mon, July 3 2023</span>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">{{accessory.description}}</div>
+            <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
+            </div>
+    </article>
+     {% endfor %}
+</div>
+{% endblock %}

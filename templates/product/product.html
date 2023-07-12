@@ -7,14 +7,15 @@
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/Taillift.css' %}">
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+<script src="{% static 'JavaScripts\tl&tg.js' %}"></script>
 <div class="container pb-5">
   <div class="row">
     <div class="container mt-5 text-center">
         
       <h1>
         {% for word in header %}
-          {% if forloop.counter0|divisibleby:2 %}
+          {% if not forloop.last %}
             <span class="white-text">{{word}}</span>
           {% else %}
             <span class="yellow-text">{{word}}</span>
@@ -27,7 +28,20 @@
 <div class="container">
   {% recursetree products %}
   <article class="postcard dark">
-    <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+    {% if node.is_leaf_node %}
+    <a data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-slide-to="0">
+      <div class="card">
+        <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+      </div>
+    </a>
+    {% else %}
+      <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+    {% endif %}
+    <a data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-slide-to="0">
+      <div class="card">
+        <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+      </div>
+    </a>
     <div class="postcard__text px-4 pt-2">
         {% if not node.is_leaf_node %}
             <a class="stretched-link text-decoration-none"  href="{{node.name}}">
@@ -42,9 +56,36 @@
         </div>
         <div class="postcard__bar"></div>
         <div class="postcard__preview-txt">{{node.description}}</div>
-        <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
+          <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
         </div>
   </article>
   {% endrecursetree %}
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+              <div class="carousel-inner overflow-hidden">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                      <img src="https://picsum.photos/501/500" alt="">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                      <img src="https://picsum.photos/501/500" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                      <img src="https://picsum.photos/501/500" class="d-block w-100" alt="...">
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+      </div>
+  </div>
 </div>
 {% endblock %}

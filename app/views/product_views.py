@@ -3,7 +3,9 @@ from django.shortcuts import render, get_object_or_404
 from ..models import (TailGateTailLift,
                       CoolingSystem,
                       LogisticProduct,
-                      DumpHoist)
+                      DumpHoist,
+                      Accessory,
+                      AccessoriesStatus)
 
 def TailLiftTailGateView(request, path=None):
     content = {}
@@ -13,12 +15,26 @@ def TailLiftTailGateView(request, path=None):
         node = get_object_or_404(TailGateTailLift, name=name)
         content['header'] = name.split(' ')
         products = node.get_children()
+        last = node.get_last_child()
+        content['last'] = last.name
     else:
         content['header'] = ['Tail Gate', ' & Tail Lift']
         products = TailGateTailLift.objects.all()
     content['products'] = products
-    return render(request, 'product\\product.html', content)
+    return render(request, 'product\\tl&tg_product.html', content)
 
+def AccessoryView(request, type):
+    accessory_status = get_object_or_404(AccessoriesStatus, name__name=type)
+    accessories = list()
+    fields = accessory_status._meta.get_fields()
+    for field in fields:
+        if field.name != 'id' and field.name != 'name':
+            if getattr(accessory_status, field.name):
+                accessories.append(Accessory.objects.get(name=field.verbose_name))
+    content = {'header': type.split(' '), 'accessories': accessories}
+   
+    return render(request, 'product\\accessory.html', content)
+    
 
 def CoolingSystemView(request, path=None):
     content = {}
