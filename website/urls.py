@@ -26,6 +26,8 @@ urlpatterns = [
     path('about-us', views.about_us, name='about_us'),
     path('contact-us', views.contact_us, name='contact_us'),
     path('after-sales-service', views.after_sales_service, name='after_sales_service'),
+    path('warranty', views.warranty, name='warranty'),
+    path('onsite-services', views.onsite, name='onsite'),
     path('tail-lift-tail-gate/', include('app.urls.taillift_tailgate_urls')),
     path('cooling-system/', include('app.urls.cooling_system_urls')),
     path('logistic-product/', include('app.urls.logistic_product_urls')),

@@ -1,0 +1,54 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}
+  Safeway Tailgate - Onsite Services
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/services_table.css' %}">
+<div class="container pt-4 pb-3">
+	<div class="row">
+	  <div class="container mt-4">
+		<h1>
+		  <span class="white-text">Onsite </span>
+		  <span class="yellow-text">Services</span>
+		</h1>
+	  </div>
+	</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="table-responsive">
+                <table style="width:100%" class="table table-striped table-bordered mb-0">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tail Gate & Tail Lift</td>
+                            <td><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Cooling System</td>
+                            <td><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Logistic Product</td>
+                            <td><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Dump Hoist</td>
+                            <td><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>                   
+{% endblock %}

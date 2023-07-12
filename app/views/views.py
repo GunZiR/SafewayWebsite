@@ -35,3 +35,9 @@ def about_us(request):
 
 def after_sales_service(request):
     return render(request, 'app\\after_sales_service.html')
+
+def warranty(request):
+    return render(request, 'app\\warranty.html')
+
+def onsite(request):
+    return render(request, 'app\\onsite.html')

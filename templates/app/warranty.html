@@ -1,0 +1,60 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}
+  Safeway Tailgate - Warranty
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/services_table.css' %}">
+<div class="container pt-4 pb-3">
+	<h1 class="yellow-text">Warranty</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="table-responsive">
+                <table style="width:100%" class="table table-striped table-bordered mb-0">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Product</th>
+                            <th>Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">Tail Gate & Tail Lift</td>
+                            <td>Tail Gate</td>
+                            <td>2 years</td>
+                        </tr>
+                        <tr>
+                            <td>Van Lift</td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <td>Tail Lift</td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <td>Step-Frame Loader</td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Cooling System</td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Logistic Product</td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Dump Hoist</td>
+                            <td>1 year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>                   
+{% endblock %}
