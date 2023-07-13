@@ -44,15 +44,15 @@
                     <span class="dropdown">
                         {% get_current_language as CURRENT_LANGUAGE %}
                         {% get_available_languages as AVAILABLE_LANGUAGES %}
-                        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
-                        <a class="text-decoration-none text-white hover-underline-animation" href="#" role="button" aria-expanded="false" data-bs-toggle="dropdown" id="globalDropdown">
+                        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %} 
+                        <a class="text-decoration-none text-white hover-underline-animation text-uppercase" href="#" role="button" aria-expanded="false" data-bs-toggle="dropdown" id="globalDropdown">
                             <i class="fa fa-light fa-globe"></i> {{CURRENT_LANGUAGE}}
                         </a>
                         <ul class="dropdown-menu m-0 p-1" aria-labelledby="globalDropdown">
                             {% for language in languages %}
                                 {% if language.code != CURRENT_LANGUAGE %}
                                     <li>
-                                        <a class="text-decoration-none text-black" href="/{{ language.code }}/">{{ language.code }}</a>
+                                        <a class="text-decoration-none text-black text-uppercase" href="/{{ language.code }}/{{request.get_full_path|slice:'4:'}}">{{ language.code }}</a>
                                     </li>
                                 {% endif %}
                             {% endfor %}
@@ -76,7 +76,7 @@
                                         <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Tail Gate' %}">Tail Gate</a></li>
                                         <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Van Lift' %}">Van Lift</a></li>
                                         <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Tail Lift' %}">Tail Lift</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Step Frame' %}">Step Frame</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Step-Frame Loader' %}">Step-Frame Loader</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -87,10 +87,9 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <ul>
-                                    <li><a class="dropdown-item" href="#">Evo Air Cooler</a></li>
-                                    <li><a class="dropdown-item" href="#">Cooling Wall</a></li>
-                                    <li><a class="dropdown-item" href="#">Exhaust Fan</a></li>
-                                    <li><a class="dropdown-item" href="#">FRP Cone Fan</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'cooling_system_product' 'Evo Air Cooler' %}">Evo Air Cooler</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'cooling_system_product' 'Exhaust Fan' %}">Exhaust Fan</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'cooling_system_product' 'FRP Cone Fan' %}">FRP Cone Fan</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -100,11 +99,8 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
                                 <ul>
-                                    <li><a class="dropdown-item" href="#">Stacker</a></li>
-                                    <li><a class="dropdown-item" href="#">Drum Cart</a></li>
-                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'logistic_product' 'Stacker' %}">Stacker</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'logistic_product' 'Drum Cart' %}">Drum Cart</a></li>
                                 </ul>
                                 <ul>
                             </div>
@@ -113,15 +109,6 @@
                             <a class="nav-link" href="{% url 'dump_hoist_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
                                 Dump Hoist
                             </a>
-                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
-                                <ul>
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                </ul>
-                            </div>
                         </li>
                     </ul>
                 </div>
@@ -143,8 +130,8 @@
                 </div>
                 <div class="col-lg mt-3 text-lg-start d-flex align-items-center black-text">
                   <ul class="list-unstyled">
-                    <li><p class="small mb-1">167/1 M.4 T.Nongchak A.Banbung Chonburi 20170</p></li>
-                    <li><p class="small mb-1">Monday - Saturday 8:00 - 17:00</p></li>
+                    <li><p class="small mb-1">167/1 {% trans 'M.4 T.Nongchak A.Banbung Chonburi' %} 20170</p></li>
+                    <li><p class="small mb-1">{% trans 'Monday - Saturday' %} 8:00 - 17:00</p></li>
                     <li><p class="small mb-1">+66 (0) 38-485-267</p></li>
                     <li><p class="small mb-1">+66 (0) 38-485-268</p></li>
                   </ul>

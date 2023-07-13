@@ -27,23 +27,9 @@
 <div class="container">
   {% recursetree products %}
   <article class="postcard dark">
-    {% if node.is_leaf_node %}
-    <a href="#" data-bs-toggle="modal" data-bs-target="#popupImage" data-bs-slide-to="0">
-      <div class="card">
-        <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
-      </div>
-    </a>
-    {% else %}
-      <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
-    {% endif %}
+    <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
     <div class="postcard__text px-4 pt-2">
-        {% if not node.is_leaf_node %}
-          <a class="stretched-link text-decoration-none"  href="{{node.name}}">
-            <h1 class="postcard__title yellow-text mt-3">{{node.name}}</h1>
-          </a>
-        {% else %}
-            <h1 class="postcard__title yellow-text mt-3">{{node.name}}</h1>
-        {% endif %}
+        <h1 class="postcard__title yellow-text mt-3">{{node.name}}</h1>
         <div class="postcard__subtitle">
           <i class="fas fa-calendar-alt fa-xs mr-2"></i>
           <span class="small"> Mon, July 3 2023</span>
@@ -52,14 +38,15 @@
         <div class="postcard__preview-txt">{{node.description}}</div>
           <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
         </div>
+    {% if not node.is_leaf_node %}
+      <a class="stretched-link text-decoration-none"  href="{{node.name}}"></a>
+    {% endif %}
   </article>
-  {% if last == node.name and node.is_leaf_node %}
+  {% if last == node.name and node.is_leaf_node and node.parent.name != 'Step-Frame Loader' %}
   <article class="postcard dark">
     <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
     <div class="postcard__text px-4 pt-2">
-      <a class="stretched-link text-decoration-none"  href="{% url 'tl&tg_accessory' node.parent %}">
-        <h1 class="postcard__title yellow-text mt-3">Accessory</h1>
-      </a>
+      <h1 class="postcard__title yellow-text mt-3">Accessory</h1></a>
       <div class="postcard__subtitle">
         <i class="fas fa-calendar-alt fa-xs mr-2"></i>
         <span class="small"> Mon, July 3 2023</span>
@@ -68,36 +55,10 @@
       <div class="postcard__preview-txt">{{node.description}}</div>
       <p class="text-end">SAFEWAY TAILGATE CO.,LTD.</p>
     </div>
+    <a class="stretched-link text-decoration-none"  href="{% url 'tl&tg_accessory' node.parent %}"></a>
   </article>
   {% endif %}
   {% endrecursetree %}
 </div>
 <!----------------------------------------------------------------: modal carousel :--------------------------------------------------->
-<div class="modal fade" id="popupImage" tabindex="-1" aria-labelledby="popupImageLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div id="popupImageControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner overflow-hidden">
-          <div class="carousel-item active" data-bs-interval="5000">
-            <img src="https://picsum.photos/501/500" alt="">
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="https://picsum.photos/501/500" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="https://picsum.photos/501/500" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#popupImageControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#popupImageControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 {% endblock %}

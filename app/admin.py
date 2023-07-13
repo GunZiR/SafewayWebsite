@@ -1,7 +1,7 @@
 from django.contrib import admin
-# from mptt.admin import MPTTModelAdmin
 from feincms.admin import tree_editor
-from feincms.admin.item_editor import ItemEditor
+from parler.admin import TranslatableAdmin, TranslatableModelForm
+from mptt.forms import MPTTAdminForm
 
 from .models import (TailGateTailLift,
                      CoolingSystem,
@@ -10,8 +10,14 @@ from .models import (TailGateTailLift,
                      Accessory,
                      AccessoriesStatus)
 
-class TreeAdmin(tree_editor.TreeEditor):
+class CategoryAdminForm(MPTTAdminForm, TranslatableModelForm):
     pass
+
+
+class TreeAdmin(tree_editor.TreeEditor, TranslatableAdmin):
+    form = CategoryAdminForm
+    def get_prepopulated_fields(self, request, obj=None):
+        return {'slug': ('slug',)}  # needed for translated fields
 
 
 # Register your models here.
@@ -19,5 +25,5 @@ admin.site.register(TailGateTailLift, TreeAdmin)
 admin.site.register(CoolingSystem, TreeAdmin)
 admin.site.register(LogisticProduct, TreeAdmin)
 admin.site.register(DumpHoist, TreeAdmin)
-admin.site.register(Accessory)
+admin.site.register(Accessory, TranslatableAdmin)
 admin.site.register(AccessoriesStatus)
