@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,7 +30,7 @@
         </style>
     </head>
     <body class="background-black">
-        <nav id="navbar_top" class="navbar navbar-expand-lg flex-column py-0" style="background-image:url('{% static 'images/77.jpg' %}')">
+        <nav id="navbar_top" class="navbar navbar-expand-lg flex-column py-0" style="background-image:url('{% static 'images/bg.jpg' %}'); background-size: cover;background-position: center;">
             <div class="container py-0">
                 <div class="col-6 ps-5 pt-1">
                     <a class="navbar-brand" href="{% url 'index' %}">
@@ -41,11 +42,20 @@
                         <a class="mx-3 text-decoration-none text-white hover-underline-animation" href="{% url 'contact_us' %}">Contact</a>
                     </span>
                     <span class="dropdown">
+                        {% get_current_language as CURRENT_LANGUAGE %}
+                        {% get_available_languages as AVAILABLE_LANGUAGES %}
+                        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
                         <a class="text-decoration-none text-white hover-underline-animation" href="#" role="button" aria-expanded="false" data-bs-toggle="dropdown" id="globalDropdown">
-                            <i class="fa fa-light fa-globe"></i> Global
+                            <i class="fa fa-light fa-globe"></i> {{CURRENT_LANGUAGE}}
                         </a>
                         <ul class="dropdown-menu m-0 p-1" aria-labelledby="globalDropdown">
-                            <li><a class="dropdown-item" href="#">Thai</a></li>
+                            {% for language in languages %}
+                                {% if language.code != CURRENT_LANGUAGE %}
+                                    <li>
+                                        <a class="text-decoration-none text-black" href="/{{ language.code }}/">{{ language.code }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
                         </ul>
                     </span>
                 </div>
@@ -141,9 +151,9 @@
                 </div>
                 <div class="col-lg mt-3">
                   <ul class="list-unstyled">
-                    <li><a class="text-decoration-none black-text" href="{% url 'after_sales_service' %}"><span class="small mb-1 hover-underline">After Sales Service</span></a></li>
-                    <li><a class="text-decoration-none black-text" href="{% url 'about_us' %}"><span class="small mb-1 hover-underline">About Us</span></a></li>
-                    <li><a class="text-decoration-none black-text" href="{% url 'contact_us' %}"><span class="small mb-1 hover-underline">Contact Us</span></a></li>
+                    <li><a class="text-decoration-none black-text" href="{% url 'after_sales_service' %}"><span class="small mb-1 hover-underline">{% trans 'After Sales Service' %}</span></a></li>
+                    <li><a class="text-decoration-none black-text" href="{% url 'about_us' %}"><span class="small mb-1 hover-underline">{% trans 'About Us' %}</span></a></li>
+                    <li><a class="text-decoration-none black-text" href="{% url 'contact_us' %}"><span class="small mb-1 hover-underline">{% trans 'Contact Us' %}</span></a></li>
                   </ul>
                   <h6 class="mt-2">Follow Us</h6>
                   <div class="d-inline">

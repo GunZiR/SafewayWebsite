@@ -15,14 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
 
 from app.views import views
 
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('rosetta/', include('rosetta.urls')),
+    re_path(r'^i18n/', include('django.conf.urls.i18n')),
     path('about-us', views.about_us, name='about_us'),
     path('contact-us', views.contact_us, name='contact_us'),
     path('after-sales-service', views.after_sales_service, name='after_sales_service'),
@@ -32,4 +36,4 @@ urlpatterns = [
     path('cooling-system/', include('app.urls.cooling_system_urls')),
     path('logistic-product/', include('app.urls.logistic_product_urls')),
     path('dump-hoist/', include('app.urls.dump_hoist_urls')),
-]
+)

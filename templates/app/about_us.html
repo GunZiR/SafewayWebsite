@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
   Safeway Tailgate - About Us
@@ -31,10 +32,13 @@
       </div>
       <div class="about-us-content">
         <p class="description">
-Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial registered capital of      
-          5 million Baht. Initially, the company's headquarters was located in Nong Ree Subdistrict, Mueang District, 
-          Chonburi Province, with an area of 800 square meters, and have been audited the 
-          registration be progressed to the quality assurance standard ISO9001 : 2000 .</p>
+          {% blocktrans %}
+            Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial registered capital of      
+            5 million Baht. Initially, the company's headquarters was located in Nong Ree Subdistrict, Mueang District, 
+            Chonburi Province, with an area of 800 square meters, and have been audited the 
+            registration be progressed to the quality assurance standard ISO9001 : 2000.
+          {% endblocktrans %}
+        </p>
       </div>
     </div>
     <!-------------------------------------------- end experience section ---------------------------------------->
@@ -51,9 +55,11 @@ Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial re
       </div>
       <div class="about-us-content">
         <p class="description mt-3">
-          The company has changed its headquarters to Nong Chak Subdistrict, Ban Bung District, 
-          Chonburi Province, with an area of 11,200 square meters. 
-          The registered capital has also been increased to 20 million Baht.
+          {% blocktrans %}
+            The company has changed its headquarters to Nong Chak Subdistrict, Ban Bung District, 
+            Chonburi Province, with an area of 11,200 square meters. 
+            The registered capital has also been increased to 20 million Baht.
+          {% endblocktrans %}
         </p>
       </div>
     </div>
@@ -71,8 +77,10 @@ Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial re
       </div>
       <div class="about-us-content">
         <p class="description mt-3">
-          We have started expanding our logistics channels by exporting our products to various countries such 
-          as Cambodia, Malaysia, Laos, Myanmar, Vietnam, Indonesia, and Taiwan.
+          {% blocktrans %}
+            We have started expanding our logistics channels by exporting our products to various countries such 
+            as Cambodia, Malaysia, Laos, Myanmar, Vietnam, Indonesia, and Taiwan.
+          {% endblocktrans %}
         </p>
       </div>
     </div>
@@ -90,8 +98,10 @@ Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial re
       </div>
       <div class="about-us-content">
         <p class="description mt-3">
-          We have started incorporating technology to enhance production efficiency, and in the future, 
-          we remain committed to continuous development of our company.
+          {% blocktrans %}
+            We have started incorporating technology to enhance production efficiency, and in the future, 
+            we remain committed to continuous development of our company.
+          {% endblocktrans %}
        </p>
       </div>
     </div>
@@ -102,10 +112,12 @@ Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial re
   <div class="row pt-4">
     <div class="col-2"></div>
     <div class="col-8 text-light align-content-center text-start">
-      <span class="me-5"></span> We remain committed to developing products in various aspects, including quality and on-time 
-      delivery to meet customer requirements to the highest degree. Furthermore, we adhere to ISO standards in our 
-      manufacturing processes to ensure that customers receive the highest quality work. We strive to enhance the 
-      capabilities of our company to better accommodate customer needs and provide excellent service.
+      {% blocktrans %}
+        We remain committed to developing products in various aspects, including quality and on-time 
+        delivery to meet customer requirements to the highest degree. Furthermore, we adhere to ISO standards in our 
+        manufacturing processes to ensure that customers receive the highest quality work. We strive to enhance the 
+        capabilities of our company to better accommodate customer needs and provide excellent service.
+      {% endblocktrans %}
   </div>
     <div class="col-2"></div>
   </div>
@@ -123,9 +135,12 @@ Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial re
       <p class="yellow-text text-end">SAFE</p>
     </div>
     <div class="col-7 text-light align-content-center text-start">
-        <p>The products we manufacture adhere to standards to ensure 
-      that customers receive safe 
-      and reliable products. Customers can have confidence in the safety of our products during their usage.
+        <p>
+          {% blocktrans %}
+          The products we manufacture adhere to standards to ensure 
+          that customers receive safe 
+          and reliable products. Customers can have confidence in the safety of our products during their usage.
+          {% endblocktrans %}
         </p>
         <div class="col-2"></div>
     </div>
@@ -136,7 +151,7 @@ Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial re
       <p class="yellow-text text-end">CONVENIENT</p>
     </div>
     <div class="col-7 text-light align-content-center text-start">
-      <p>Customers should experience increased convenience when using our products.</p>
+      <p>{% blocktrans %}Customers should experience increased convenience when using our products.{% endblocktrans %}</p>
       <div class="col-2"></div>
     </div>
   </div>
@@ -146,7 +161,7 @@ Safeway Tailgate Co., Ltd. was established on January 8, 2004 with an initial re
       <p class="yellow-text text-end">SINCERE</p>
     </div>
     <div class="col-7 text-light align-content-center text-start">
-      <p>We provide honest and straightforward service to our customers, ensuring that they feel at ease when purchasing our products.</p>
+      <p>{% blocktrans %}We provide honest and straightforward service to our customers, ensuring that they feel at ease when purchasing our products.{% endblocktrans %}</p>
     </div>
     <div class="col-2"></div>
   </div>

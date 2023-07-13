@@ -1,5 +1,6 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
+from parler.models import TranslatableModel, TranslatedFields
 
 # ===================================================: Tail Gate & Tail Lift :================================================
 class TailGateTailLift(MPTTModel):

@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-13 10:55+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\app\about_us.html:35
+msgid ""
+"\n"
+"            Safeway Tailgate Co., Ltd. was established on January 8, 2004 "
+"with an initial registered capital of      \n"
+"            5 million Baht. Initially, the company's headquarters was "
+"located in Nong Ree Subdistrict, Mueang District, \n"
+"            Chonburi Province, with an area of 800 square meters, and have "
+"been audited the \n"
+"            registration be progressed to the quality assurance standard "
+"ISO9001 : 2000.\n"
+"          "
+msgstr ""
+
+#: .\templates\app\about_us.html:58
+msgid ""
+"\n"
+"            The company has changed its headquarters to Nong Chak "
+"Subdistrict, Ban Bung District, \n"
+"            Chonburi Province, with an area of 11,200 square meters. \n"
+"            The registered capital has also been increased to 20 million "
+"Baht.\n"
+"          "
+msgstr ""
+
+#: .\templates\app\about_us.html:80
+msgid ""
+"\n"
+"            We have started expanding our logistics channels by exporting "
+"our products to various countries such \n"
+"            as Cambodia, Malaysia, Laos, Myanmar, Vietnam, Indonesia, and "
+"Taiwan.\n"
+"          "
+msgstr ""
+
+#: .\templates\app\about_us.html:101
+msgid ""
+"\n"
+"            We have started incorporating technology to enhance production "
+"efficiency, and in the future, \n"
+"            we remain committed to continuous development of our company.\n"
+"          "
+msgstr ""
+
+#: .\templates\app\about_us.html:115
+msgid ""
+"\n"
+"        We remain committed to developing products in various aspects, "
+"including quality and on-time \n"
+"        delivery to meet customer requirements to the highest degree. "
+"Furthermore, we adhere to ISO standards in our \n"
+"        manufacturing processes to ensure that customers receive the highest "
+"quality work. We strive to enhance the \n"
+"        capabilities of our company to better accommodate customer needs and "
+"provide excellent service.\n"
+"      "
+msgstr ""
+
+#: .\templates\app\about_us.html:139
+msgid ""
+"\n"
+"          The products we manufacture adhere to standards to ensure \n"
+"          that customers receive safe \n"
+"          and reliable products. Customers can have confidence in the safety "
+"of our products during their usage.\n"
+"          "
+msgstr ""
+
+#: .\templates\app\about_us.html:154
+msgid ""
+"Customers should experience increased convenience when using our products."
+msgstr ""
+
+#: .\templates\app\about_us.html:164
+msgid ""
+"We provide honest and straightforward service to our customers, ensuring "
+"that they feel at ease when purchasing our products."
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:30
+msgid "Warranty"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:34
+msgid ""
+"\n"
+"\t\t\t\t\t\tSafeway Tailgate offers a warranty against any abnormal "
+"functioning with your Safeway Tailgate product(s).\n"
+"\t\t\t\t\t\tPlease note that terms and conditions of the warranty may vary "
+"depending on the conditions and product.\n"
+"\t\t\t\t\t\t"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:39
+#: .\templates\app\after_sales_service.html:61
+msgid "More info"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:51
+msgid "Onsite Services"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:55
+msgid ""
+"\n"
+"\t\t\t\t\tSafeway Tailgate offers onsite service to provide assistance for "
+"our customers, \n"
+"\t\t\t\t\tensuring convenience for any operational issues. \n"
+"\t\t\t\t\tPlease note that terms and conditions of the onsite service may "
+"vary depending on the conditions and product.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:73
+msgid "Car Inspection Services"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:77
+msgid ""
+"\n"
+"\t\t\t\t\t\tSafeway Tailgate provides a free car inspection service to our "
+"customers. However, please \n"
+"\t\t\t\t\t\tnote that this service is available only at our company, Safeway "
+"Tailgate Co., Ltd.\n"
+"\t\t\t\t\t\tThis service is specific only to <span class=\"text-danger"
+"\">tail gate & tail lift</span> product(s).\n"
+"\t\t\t\t\t\t"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:90
+msgid "Lubricant Services"
+msgstr ""
+
+#: .\templates\app\after_sales_service.html:94
+msgid ""
+"\n"
+"\t\t\t\t\tSafeway Tailgate provides a free lubricant service through the "
+"lifespan of your vehicle.\n"
+"\t\t\t\t\tHowever, please note that this service is available only at our "
+"company, Safeway Tailgate Co., Ltd.\n"
+"\t\t\t\t\tThis service is specific only to <span class=\"text-danger\">tail "
+"gate & tail lift</span> product(s).\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\templates\app\index.html:59
+msgid ""
+"\n"
+"          We focus on carefully selecting materials and components for "
+"manufacturing to achieve lightweight yet high-performance products. This "
+"enhances the efficiency of their usage. This is achieved through the "
+"utilization of cutting-edge computer-aided design software, allowing the "
+"company to reduce the weight of components without compromising strength. As "
+"a result, customers can enjoy long-term, trouble-free operations with highly "
+"efficient performance for many years.\n"
+"          "
+msgstr ""
+
+#: .\templates\app\index.html:69
+msgid ""
+"\n"
+"          Our products have a maximum lifting capacity of up to 2,000 "
+"kilograms, and each order is custom-manufactured to meet the specific "
+"requirements of our customers. This enables us to tailor our products to "
+"precisely match the needs of our customers, ensuring optimal effectiveness. "
+"Our knowledgeable team, who have undergone extensive training, are available "
+"to listen to your requirements and provide suitable recommendations. They "
+"will design products that align perfectly with your specific needs.\n"
+"          "
+msgstr ""
+
+#: .\templates\app\index.html:86
+msgid ""
+"\n"
+"            We also produce air cooler units for both indoor and outdoor "
+"use. These units are designed to dissipate heat from buildings or factories "
+"that experience excessive heat or have machinery that generates high "
+"temperatures. They are also suitable for buildings with limited air "
+"ventilation, including factories with a large number of employees. "
+"Therefore, this Air cooler is capable of addressing these issues as well.\n"
+"          "
+msgstr ""
+
+#: .\templates\base\base.html:152
+msgid "After Sales Service"
+msgstr ""
+
+#: .\templates\base\base.html:153
+msgid "About Us"
+msgstr ""
+
+#: .\templates\base\base.html:154
+msgid "Contact Us"
+msgstr ""
+
+#: .\website\settings.py:135
+msgid "English"
+msgstr ""
+
+#: .\website\settings.py:136
+msgid "Thai"
+msgstr ""

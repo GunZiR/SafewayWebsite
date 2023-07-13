@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
   Safeway Tailgate - After Sales Service
@@ -26,14 +27,16 @@
 			</div>
 			<div class="service-panel">
 				<div class="service-heading yellow-text">
-					<h4 class="service-title">Warranty</h4>
+					<h4 class="service-title">{% trans 'Warranty' %}</h4>
 				</div>
 				<div class="service-body white-text">
 					<p> 
+						{% blocktrans %}
 						Safeway Tailgate offers a warranty against any abnormal functioning with your Safeway Tailgate product(s).
-						Please note that terms and conditions of the warranty may vary depending on the conditions and product. 
+						Please note that terms and conditions of the warranty may vary depending on the conditions and product.
+						{% endblocktrans %} 
 						<a class="more-info tex-decoration-none" href="{% url 'warranty' %}" id="style-2" data-replace="herek">
-							<span>More info</span>
+							<span>{% trans 'More info' %}</span>
 						</a>
 					</p>
 				</div>
@@ -45,15 +48,17 @@
 		</div>
 		<div class="service-panel">
 			<div class="service-heading yellow-text">
-				<h4 class="service-title">Onsite Services</h4>
+				<h4 class="service-title">{% trans 'Onsite Services' %}</h4>
 			</div>
 			<div class="service-body white-text">
 				<p>
+					{% blocktrans %}
 					Safeway Tailgate offers onsite service to provide assistance for our customers, 
 					ensuring convenience for any operational issues. 
 					Please note that terms and conditions of the onsite service may vary depending on the conditions and product.
+					{% endblocktrans %} 
 					<a class="more-info tex-decoration-none" href="{% url 'onsite' %}" id="style-2" data-replace="herek">
-						<span>More info</span>
+						<span>{% trans 'More info' %}</span>
 					</a>
 				</p>
 			</div>
@@ -65,13 +70,15 @@
 			</div>
 			<div class="service-panel">
 				<div class="service-heading yellow-text">
-					<h4 class="service-title">Car Inspection Services</h4>
+					<h4 class="service-title">{% trans 'Car Inspection Services' %}</h4>
 				</div>
 				<div class="service-body white-text">
 					<p>
+						{% blocktrans %}
 						Safeway Tailgate provides a free car inspection service to our customers. However, please 
 						note that this service is available only at our company, Safeway Tailgate Co., Ltd.
 						This service is specific only to <span class="text-danger">tail gate & tail lift</span> product(s).
+						{% endblocktrans %} 
 					</p>
 				</div>
 			</div>
@@ -80,13 +87,15 @@
 			<div class="service-badge"><i class="fa-solid fa-oil-can"></i></div>
 			<div class="service-panel">
 			  <div class="service-heading yellow-text">
-				<h4 class="service-title">Lubricant Services</h4>
+				<h4 class="service-title">{% trans 'Lubricant Services' %}</h4>
 			  </div>
 			  <div class="service-body white-text">
 				<p>
+					{% blocktrans %}
 					Safeway Tailgate provides a free lubricant service through the lifespan of your vehicle.
 					However, please note that this service is available only at our company, Safeway Tailgate Co., Ltd.
 					This service is specific only to <span class="text-danger">tail gate & tail lift</span> product(s).
+					{% endblocktrans %} 
 				</p>
 			  </div>
 			</div>
