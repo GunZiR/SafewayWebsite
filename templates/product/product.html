@@ -28,7 +28,11 @@
 <div class="container">
   {% recursetree products %}
   <article class="postcard dark">
-    <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+    {% if node.image_src %}
+      <img class="postcard__img" src="{{ node.image_src.url }}" alt="Image Title" />
+    {% else %}
+      <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+    {% endif %}
     <div class="postcard__text px-4 pt-2">
         <h1 class="postcard__title yellow-text mt-3">{{node.name}}</h1>
         <div class="postcard__subtitle">

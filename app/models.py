@@ -70,7 +70,7 @@ class LogisticProduct(MPTTModel, TranslatableModel):
 # ===================================================: Dump Hoist :==================================================
 class DumpHoist(MPTTModel, TranslatableModel):
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
-    image_src = models.ImageField(upload_to='images/logisticproduct/', null=True, blank=True)
+    image_src = models.ImageField(upload_to='images/dumphoist/', null=True, blank=True)
     name = models.CharField(max_length=255)
     slug = models.SlugField(null=True, blank=True)
     translations = TranslatedFields(
@@ -92,7 +92,7 @@ class Accessory(TranslatableModel):
         description = models.TextField(),
     )
     slug = models.SlugField(null=True, blank=True)
-    image_src = models.ImageField(upload_to='images/', null=True, blank=True)
+    image_src = models.ImageField(upload_to='images/accessory', null=True, blank=True)
 
     def __str__(self):
         return self.name
