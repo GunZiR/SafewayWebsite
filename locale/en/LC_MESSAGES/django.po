@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-13 10:55+0700\n"
+"POT-Creation-Date: 2023-07-14 10:26+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\app\forms.py:7
+msgid "name"
+msgstr ""
+
+#: .\app\forms.py:11
+msgid "John Doe"
+msgstr ""
+
+#: .\app\forms.py:14
+msgid "email"
+msgstr ""
+
+#: .\app\forms.py:24 .\app\forms.py:28
+msgid "subject"
+msgstr ""
+
+#: .\app\forms.py:31 .\app\forms.py:35
+msgid "message"
+msgstr ""
+
+#: .\app\views\views.py:28
+msgid "Invalid header found."
+msgstr ""
+
+#: .\app\views\views.py:29
+msgid "Message sent."
+msgstr ""
+
+#: .\app\views\views.py:32
+msgid "Invalid Form"
+msgstr ""
 
 #: .\templates\app\about_us.html:35
 msgid ""
@@ -163,6 +195,10 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 
+#: .\templates\app\contact_us.html:58
+msgid "M.4 T.Nongchak A.Banbung<br>Chonburi"
+msgstr ""
+
 #: .\templates\app\index.html:59
 msgid ""
 "\n"
@@ -201,22 +237,22 @@ msgid ""
 "          "
 msgstr ""
 
-#: .\templates\base\base.html:152
+#: .\templates\base\base.html:131
+msgid "M.4 T.Nongchak A.Banbung Chonburi"
+msgstr ""
+
+#: .\templates\base\base.html:132
+msgid "Monday - Saturday"
+msgstr ""
+
+#: .\templates\base\base.html:139
 msgid "After Sales Service"
 msgstr ""
 
-#: .\templates\base\base.html:153
+#: .\templates\base\base.html:140
 msgid "About Us"
 msgstr ""
 
-#: .\templates\base\base.html:154
+#: .\templates\base\base.html:141
 msgid "Contact Us"
-msgstr ""
-
-#: .\website\settings.py:135
-msgid "English"
-msgstr ""
-
-#: .\website\settings.py:136
-msgid "Thai"
 msgstr ""

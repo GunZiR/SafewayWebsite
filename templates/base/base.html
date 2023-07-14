@@ -48,7 +48,7 @@
                         <a class="text-decoration-none text-white hover-underline-animation text-uppercase" href="#" role="button" aria-expanded="false" data-bs-toggle="dropdown" id="globalDropdown">
                             <i class="fa fa-light fa-globe"></i> {{CURRENT_LANGUAGE}}
                         </a>
-                        <ul class="dropdown-menu m-0 p-1" aria-labelledby="globalDropdown">
+                        <ul class="dropdown-menu ms-2 mt-0 py-1 px-2" aria-labelledby="globalDropdown">
                             {% for language in languages %}
                                 {% if language.code != CURRENT_LANGUAGE %}
                                     <li>
@@ -70,26 +70,24 @@
                             <a class="nav-link " href="{% url 'tl&tg_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
                                Tail Gate & Tail Lift
                             </a>
-                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
-                                <div class="col md-3">
+                            <div class="dropdown-menu dropdown-menu-hover animate slideIn background-black-fade" aria-labelledby="navbarDropdown">
                                     <ul>
-                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Tail Gate' %}">Tail Gate</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Van Lift' %}">Van Lift</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Tail Lift' %}">Tail Lift</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'tl&tg_product' 'Step-Frame Loader' %}">Step-Frame Loader</a></li>
+                                        <li><a class="dropdown-item dropdown-item-hover" href="{% url 'tl&tg_product' 'Tail Gate' %}">Tail Gate</a></li>
+                                        <li><a class="dropdown-item dropdown-item-hover" href="{% url 'tl&tg_product' 'Van Lift' %}">Van Lift</a></li>
+                                        <li><a class="dropdown-item dropdown-item-hover" href="{% url 'tl&tg_product' 'Tail Lift' %}">Tail Lift</a></li>
+                                        <li><a class="dropdown-item dropdown-item-hover" href="{% url 'tl&tg_product' 'Step-Frame Loader' %}">Step-Frame Loader</a></li>
                                     </ul>
-                                </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown dropdown-hover mx-3">
                             <a class="nav-link" href="{% url 'cooling_system_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
                                 Cooling System
                             </a>
-                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-hover animate slideIn background-black-fade" aria-labelledby="navbarDropdown">
                                 <ul>
-                                    <li><a class="dropdown-item" href="{% url 'cooling_system_product' 'Evo Air Cooler' %}">Evo Air Cooler</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'cooling_system_product' 'Exhaust Fan' %}">Exhaust Fan</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'cooling_system_product' 'FRP Cone Fan' %}">FRP Cone Fan</a></li>
+                                    <li><a class="dropdown-item dropdown-item-hover" href="{% url 'cooling_system_product' 'Evo Air Cooler' %}">Evo Air Cooler</a></li>
+                                    <li><a class="dropdown-item dropdown-item-hover" href="{% url 'cooling_system_product' 'Exhaust Fan' %}">Exhaust Fan</a></li>
+                                    <li><a class="dropdown-item dropdown-item-hover" href="{% url 'cooling_system_product' 'FRP Cone Fan' %}">FRP Cone Fan</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -97,10 +95,10 @@
                             <a class="nav-link" href="{% url 'logistic_product_index' %}" id="navbarDropdown" role="button" aria-expanded="false">
                                 Logistic Product
                             </a>
-                            <div class="dropdown-menu dropdown-menu-hover" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-hover animate slideIn background-black-fade" aria-labelledby="navbarDropdown">
                                 <ul>
-                                    <li><a class="dropdown-item" href="{% url 'logistic_product' 'Stacker' %}">Stacker</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'logistic_product' 'Drum Cart' %}">Drum Cart</a></li>
+                                    <li><a class="dropdown-item dropdown-item-hover" href="{% url 'logistic_product' 'Stacker' %}">Stacker</a></li>
+                                    <li><a class="dropdown-item dropdown-item-hover" href="{% url 'logistic_product' 'Drum Cart' %}">Drum Cart</a></li>
                                 </ul>
                                 <ul>
                             </div>
